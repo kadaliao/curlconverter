@@ -229,7 +229,7 @@ def split(aliases):
         if len(alias["letter"]) == 1:
             alias_name = alias.get("name", alias["lname"])
             if alias["letter"] == "N":  # -N is short for --no-buffer
-                alias_name = "no-" + alias_name
+                alias_name = f"no-{alias_name}"
             if (
                 alias["letter"] in short_args
                 and short_args[alias["letter"]] != alias_name
